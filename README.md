@@ -20,7 +20,7 @@
     //The port that the application inside the container should listen on.
     "appPort": [3000], 
     
-    // Command-line arguments to pass when starting the container. 
+    // Command-line arguments to pass when starting the container with `docker run`. 
     //These arguments set the user to "node" and 
     //specify an environment variables file ".devcontainer/devcontainer.env".
     "runArgs": ["--user", "node","--env-file",".devcontainer/devcontainer.env"]

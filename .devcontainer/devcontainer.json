@@ -2,5 +2,8 @@
     "name": "nodejs-env", 
     "dockerFile": "Dockerfile",
     "appPort": [3000],
-    "runArgs": ["--user", "node","--env-file",".devcontainer/devcontainer.env"]
+    "runArgs": [
+        "--user", "node",
+        "--env-file",".devcontainer/devcontainer.env"
+    ]
 }
