@@ -10,8 +10,6 @@ RUN apt-get update && \
     
     # Utilities for connecting to remote servers via SSH
     openssh-client \
-    
+
     # This is done to keep the docker image size small by removing the `/var/lib/apt/lists/` 
     && rm -rf /var/lib/apt/lists/*
-
-git config user.name
