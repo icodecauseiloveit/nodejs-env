@@ -51,6 +51,29 @@
   "onCreateCommand":"sh .devcontainer/onCreateCommands/onCreateCommand.sh"
   ```
 
+* Persist Zsh Command History
+
+- To keep track of all the command history it is necessary to create a folder with writting privileges in the `Dockerfile`.
+  ```Dockerfile
+    RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
+    && mkdir /commandhistory \
+    && touch /commandhistory/.zsh_history \
+    && chown -R node /commandhistory \
+    && echo "$SNIPPET" >> "/home/node/.zshrc"
+  ```
+- Create a folder called `shell_history` in `.devcontainer/config/` and inside it a file called `.zsh_history`.
+- Create a mount to share the `.zsh_history` file with the local project to keep the info of history commands.
+  ```json
+    "remoteUser": "node",
+    "mounts":[
+        {
+            "source": "/home/gary/projects/nodejs-env/.devcontainer/config/shell_history",
+            "target": "/commandhistory",
+            "type": "bind"
+        }
+    ] 
+  ```
+
 * Configure Zsh and Oh_My_Zsh
 
   - Install Zsh in the `Dockerfile` by adding ther line `zsh \` before `&& rm -rf /var/lib/apt/lists/*`. Then, at the end of the file change the user to `node` and install Oh_My_Zsh as well as its plugins.

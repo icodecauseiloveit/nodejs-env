@@ -19,9 +19,16 @@
                         "path": "/usr/bin/zsh"
                     }
                 }
-                
             }
         }
     },
-    "onCreateCommand":"sh .devcontainer/onCreateCommands/onCreateCommand.sh"
+    "onCreateCommand":"sh .devcontainer/onCreateCommands/onCreateCommand.sh",
+    "remoteUser": "node",
+    "mounts":[
+        {
+            "source": "/home/gary/projects/nodejs-env/.devcontainer/config/shell_history",
+            "target": "/commandhistory",
+            "type": "bind"
+        }
+    ] 
 }

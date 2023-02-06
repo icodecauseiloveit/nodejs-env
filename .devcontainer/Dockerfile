@@ -1,5 +1,4 @@
 FROM node:18-bullseye
-WORKDIR /app
 
 USER root
 
@@ -20,7 +19,15 @@ RUN apt-get update && \
     # This is done to keep the docker image size small by removing the `/var/lib/apt/lists/` 
     && rm -rf /var/lib/apt/lists/*
 
-USER node
+RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
+    && mkdir /commandhistory \
+    && touch /commandhistory/.zsh_history \
+    && chown -R node /commandhistory \
+    && echo "$SNIPPET" >> "/home/node/.zshrc"
+
+
+USER node 
+
 
 # Oh My ZSH - INSTALLATION
 RUN cd ~ && wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && sh install.sh
