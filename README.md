@@ -99,3 +99,22 @@
       # Copying .zshrc to container
       sh .devcontainer/onCreateCommands/configure-zsh.sh
     ```
+  - Set Zsh as the default Shell in `devcontainer.json`
+  ```json
+    "customizations": {
+          "vscode": {
+              "settings": {
+                  "terminal.integrated.defaultProfile.linux": "zsh",
+                  "terminal.integrated.profiles.linux": {
+                      "bash": {
+                          "path": "/bin/bash",
+                          "icon": "terminal-bash"
+                      },
+                      "zsh": {
+                          "path": "/usr/bin/zsh"
+                      }
+                  }
+              }
+          }
+      },
+  ```
