@@ -6,5 +6,21 @@
         "--user", "node",
         "--env-file",".devcontainer/devcontainer.env"
     ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    },
+                    "zsh": {
+                        "path": "zsh"
+                    }
+                }
+            }
+        }
+    },
     "onCreateCommand":"sh .devcontainer/onCreateCommands/onCreateCommand.sh"
 }
