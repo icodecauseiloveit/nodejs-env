@@ -12,13 +12,14 @@
                 "terminal.integrated.defaultProfile.linux": "zsh",
                 "terminal.integrated.profiles.linux": {
                     "bash": {
-                        "path": "bash",
+                        "path": "/bin/bash",
                         "icon": "terminal-bash"
                     },
                     "zsh": {
-                        "path": "zsh"
+                        "path": "/usr/bin/zsh"
                     }
                 }
+                
             }
         }
     },
