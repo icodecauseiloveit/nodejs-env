@@ -141,3 +141,34 @@
           }
       },
   ```
+* Install extensions
+  - Install a theme extension an call it
+      - To do that install the extension by addins a "extensions" property inside vscode property of .devcontainer.json
+      ```json
+        "extensions": [
+                    "wesbos.theme-cobalt2"                  // Theme
+                ]
+      ```
+      - Call it in "settings" property
+      ```json
+        "customizations": {
+            "vscode": {
+                "settings": {
+                    "workbench.colorTheme": "Cobalt2",
+
+                    ...
+                }
+            }
+        }
+      ```
+  - Install more extensions depending your needs
+      ```json
+        "extensions": [
+          "anseki.vscode-color",                  // GUI to generate color codes such as CSS color notations
+          "christian-kohler.path-intellisense",   // Autocomplete paths
+          "ritwickdey.LiveServer",                // Updates HTML changes automatically
+          "mikestead.dotenv",                     // Support for .env files
+          "esbenp.prettier-vscode",               // Code formatter
+          ...
+        ]
+      ```
