@@ -36,7 +36,7 @@
     "remoteUser": "node",
     "mounts":[
         {
-            "source": "/home/gary/projects/nodejs-env/.devcontainer/config/shell_history",
+            "source": "${localWorkspaceFolder}/.devcontainer/config/shell_history", //Don't forget to create 'shell_history' folder and '.zsh_history' file inside.
             "target": "/commandhistory",
             "type": "bind"
         }
