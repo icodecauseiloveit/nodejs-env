@@ -9,6 +9,7 @@
     "customizations": {
         "vscode": {
             "settings": {
+                "workbench.colorTheme": "Cobalt2",
                 "terminal.integrated.defaultProfile.linux": "zsh",
                 "terminal.integrated.profiles.linux": {
                     "bash": {
@@ -19,7 +20,10 @@
                         "path": "/usr/bin/zsh"
                     }
                 }
-            }
+            },
+            "extensions": [
+                "wesbos.theme-cobalt2"              // Theme
+            ]
         }
     },
     "onCreateCommand":"sh .devcontainer/onCreateCommands/onCreateCommand.sh",
