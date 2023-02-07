@@ -23,10 +23,11 @@
                 }
             },
             "extensions": [
-                "ritwickdey.LiveServer",            // Updates HTML changes automatically
-                "mikestead.dotenv",                 // Support for .env files
-                "esbenp.prettier-vscode",           // Code formatter
-                "wesbos.theme-cobalt2"              // Theme
+                "christian-kohler.path-intellisense",   // Autocomplete paths
+                "ritwickdey.LiveServer",                // Updates HTML changes automatically
+                "mikestead.dotenv",                     // Support for .env files
+                "esbenp.prettier-vscode",               // Code formatter
+                "wesbos.theme-cobalt2"                  // Theme
             ]
         }
     },
