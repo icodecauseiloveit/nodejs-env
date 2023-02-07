@@ -23,6 +23,7 @@
                 }
             },
             "extensions": [
+                "esbenp.prettier-vscode",           // Formateo de documentos
                 "wesbos.theme-cobalt2"              // Theme
             ]
         }
